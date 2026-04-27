@@ -1,3 +1,2 @@
-# Atividade 5
-
-Aplicação web de agendamento de consulta usando Flask e Bootstrap 5.
+# # programacao-web-js-2s-2026
+Repositório de código da disciplina programação web com JS.
