@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento Confirmado</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #eee;">
+
+<div class="container mt-5">
+
+    <h2 class="text-center mb-4">Agendamento Realizado</h2>
+
+    <div class="card shadow p-4">
+
+        <!-- DADOS DO PACIENTE -->
+        <h4 class="mb-3">Dados do paciente</h4>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <strong>Nome:</strong> {{ dados.nome }}
+            </div>
+            <div class="col-md-6">
+                <strong>Sobrenome:</strong> {{ dados.sobrenome }}
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <strong>CPF:</strong> {{ dados.cpf }}
+            </div>
+            <div class="col-md-6">
+                <strong>Data de nascimento:</strong> {{ dados.nascimento }}
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <strong>Telefone:</strong> {{ dados.telefone }}
+            </div>
+            <div class="col-md-6">
+                <strong>CEP:</strong> {{ dados.cep }}
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <strong>Endereço:</strong> {{ dados.endereco }}
+        </div>
+
+        <hr>
+
+        <!-- DADOS DA CONSULTA -->
+        <h4 class="mb-3">Dados da consulta</h4>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <strong>Clínica:</strong> {{ dados.clinica }}
+            </div>
+            <div class="col-md-6">
+                <strong>Especialidade:</strong> {{ dados.especialidade }}
+            </div>
+        </div>
+
+        <div class="mb-2">
+            <strong>Data e hora:</strong> {{ dados.data_hora }}
+        </div>
+
+        <div class="mb-4">
+            <strong>Observação:</strong> {{ dados.observacao }}
+        </div>
+
+        <!-- BOTÃO -->
+        <div class="text-center">
+            <a href="/" class="btn btn-secondary w-50">
+                Novo agendamento
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
