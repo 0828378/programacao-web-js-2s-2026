@@ -1,35 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Agendamento</title>
+<meta charset="UTF-8">
+<title>Agendamento</title>
+
+<style>
+body {
+    font-family: Arial;
+    background: #eee;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.full {
+    grid-column: span 2;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+}
+</style>
+
 </head>
 <body>
 
-<h1>Agendamento de Consulta</h1>
+<div class="container">
+<h1>Agendamento</h1>
 
 <form action="/agendamento" method="POST">
 
-    <h2>Dados do paciente</h2>
-    <input type="text" name="nome" placeholder="Nome"><br>
-    <input type="text" name="sobrenome" placeholder="Sobrenome"><br>
-    <input type="text" name="cpf" placeholder="CPF"><br>
-    <input type="date" name="nascimento"><br>
-    <input type="text" name="telefone" placeholder="Telefone"><br>
-    <input type="text" name="cep" placeholder="CEP"><br>
-    <input type="text" name="endereco" placeholder="Endereço"><br>
+<div class="section">
+<h2>Dados do paciente</h2>
 
-    <h2>Dados da consulta</h2>
-    <input type="text" name="clinica" placeholder="Clínica"><br>
-    <input type="text" name="especialidade" placeholder="Especialidade"><br>
-    <textarea name="observacao" placeholder="Observação"></textarea><br>
-    <input type="datetime-local" name="dataHora"><br>
+<div class="grid">
+<input type="text" name="nome" placeholder="Nome">
+<input type="text" name="sobrenome" placeholder="Sobrenome">
 
-    <button type="submit">Enviar</button>
+<input type="text" name="cpf" placeholder="CPF">
+<input type="date" name="nascimento">
+
+<input type="text" name="telefone" placeholder="Telefone">
+<input type="text" name="cep" placeholder="CEP">
+
+<input class="full" type="text" name="endereco" placeholder="Endereço">
+</div>
+</div>
+
+<div class="section">
+<h2>Dados da consulta</h2>
+
+<div class="grid">
+<select name="clinica">
+<option value="">Selecione a clínica</option>
+<option>Clínica A</option>
+<option>Clínica B</option>
+</select>
+
+<select name="especialidade">
+<option value="">Especialidade</option>
+<option>Cardiologia</option>
+<option>Ortopedia</option>
+</select>
+
+<input type="date" name="data">
+<input type="time" name="hora">
+
+<textarea class="full" name="observacao" placeholder="Observação"></textarea>
+</div>
+</div>
+
+<button type="submit">Enviar</button>
 
 </form>
-
-<script src="script.js"></script>
+</div>
 
 </body>
 </html>
