@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento</title>
+</head>
+<body>
+
+<h1>Agendamento de Consulta</h1>
+
+<form action="/agendamento" method="POST">
+
+    <h2>Dados do paciente</h2>
+    <input type="text" name="nome" placeholder="Nome"><br>
+    <input type="text" name="sobrenome" placeholder="Sobrenome"><br>
+    <input type="text" name="cpf" placeholder="CPF"><br>
+    <input type="date" name="nascimento"><br>
+    <input type="text" name="telefone" placeholder="Telefone"><br>
+    <input type="text" name="cep" placeholder="CEP"><br>
+    <input type="text" name="endereco" placeholder="Endereço"><br>
+
+    <h2>Dados da consulta</h2>
+    <input type="text" name="clinica" placeholder="Clínica"><br>
+    <input type="text" name="especialidade" placeholder="Especialidade"><br>
+    <textarea name="observacao" placeholder="Observação"></textarea><br>
+    <input type="datetime-local" name="dataHora"><br>
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
